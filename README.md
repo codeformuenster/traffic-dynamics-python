@@ -2,5 +2,9 @@
 
 # traffic-dynamics-python
 
+This project is in pre-alpha status. The currently implemented functionality is:
 
-foobar
+    import traffic_dynamics_python as td
+    td.download_data()
+
+The zip files are downloaded to ./data_directory/raw_data/ .
