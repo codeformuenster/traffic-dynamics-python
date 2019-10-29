@@ -1,0 +1,10 @@
+language: python
+
+install:
+ - virtualenv -p python3 ./virtualenv
+ - . virtualenv/bin/activate
+ - pip install pytest
+
+script:
+ - cd tests
+ - pytest
