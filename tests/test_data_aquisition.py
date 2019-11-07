@@ -23,6 +23,7 @@ def test_download_and_extract_data():
             )
         )
 
+    # test extract data
     tdp.extract_data()
 
     files_to_check = [
@@ -41,3 +42,8 @@ def test_download_and_extract_data():
                 f
             )
         )
+
+    # test cleanup of data
+    tdp.reformat_and_clean_data()
+
+    # some tests, manually constructed:
