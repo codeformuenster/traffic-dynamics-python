@@ -7,9 +7,10 @@ __pycache__/
 .eggs/
 *.egg-info
 
+## IDE
 # vim swap files
 *.swp
-
 # emacs temporary files
 *~
-
+# vscode
+.vscode
