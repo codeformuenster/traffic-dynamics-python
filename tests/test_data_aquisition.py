@@ -47,3 +47,23 @@ def test_download_and_extract_data():
     tdp.reformat_and_clean_data()
 
     # some tests, manually constructed:
+    
+    import pickle
+    import numpy as np
+    test_trafficlight_filename = os.path.join(tdp.helpers.get_working_directory(), "processed_data", "LSA 29120 Schleifen (MQ1008).pickle")
+    test_trafficlight = pickle.load(open(test_trafficlight_filename,"rb"))
+    
+    mean_predictor = tdp.MeanPredictor(test_trafficlight["2016"])
+    mean_prediction = mean_predictor.predict(test_trafficlight["2017"].index)
+    mean_predictor_mse = np.sqrt((mean_prediction - test_trafficlight["2017"]).pow(2).mean())
+    assert abs(mean_predictor_mse - 294.8)<1
+
+    zero_predictor = tdp.ZeroPredictor(test_trafficlight["2016"])
+    zero_prediction = zero_predictor.predict(test_trafficlight["2017"].index)
+    zero_predictor_mse = np.sqrt((zero_prediction - test_trafficlight["2017"]).pow(2).mean())
+    assert abs(zero_predictor_mse - 890.8)<1
+    
+    mean_dow_predictor = tdp.MeanPredictorDoW(test_trafficlight["2016"])
+    mean_dow_prediction = mean_dow_predictor.predict(test_trafficlight["2017"].index)
+    mean_dow_predictor_mse = np.sqrt((mean_dow_prediction - test_trafficlight["2017"]).pow(2).mean())
+    assert abs(mean_dow_predictor_mse - 227.7)<1
