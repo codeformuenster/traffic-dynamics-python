@@ -36,6 +36,7 @@ setup(
     name="traffic_dynamics_python",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
+    scripts=['scripts/01_download_data'],
     setup_requires=setup_requirements,
     test_suite="tests",
     tests_require=test_requirements,

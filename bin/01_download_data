@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+
+from traffic_dynamics_python import download_data
+
+download_data()
