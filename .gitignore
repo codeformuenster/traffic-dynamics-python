@@ -1,3 +1,6 @@
+# data
+data_directory/
+
 # Byte-compiled / optimized / DDL files
 __pycache__/
 *.py[cod]
