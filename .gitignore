@@ -1,3 +1,6 @@
+# data
+data_directory/
+
 # Byte-compiled / optimized / DDL files
 __pycache__/
 *.py[cod]
@@ -7,9 +10,10 @@ __pycache__/
 .eggs/
 *.egg-info
 
+## IDE
 # vim swap files
 *.swp
-
 # emacs temporary files
 *~
-
+# vscode
+.vscode
