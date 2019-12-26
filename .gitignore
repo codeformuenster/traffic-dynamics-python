@@ -13,6 +13,9 @@ __pycache__/
 # testing
 .pytest_cache/
 
+# venv
+env/
+
 ## IDE
 # vim swap files
 *.swp
