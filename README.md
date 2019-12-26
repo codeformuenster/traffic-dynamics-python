@@ -2,28 +2,16 @@
 
 # traffic-dynamics-python
 
+This project is currently in pre-alpha status.
+
 ## Getting started
-
-This project is in pre-alpha status. The currently implemented functionality is:
-
-```
-import traffic_dynamics_python as td
-td.download_data()
-td.extract_data()
-td.reformat_and_clean_data()
-```
-
-The the first step, zip files are downloaded to ./data_directory/raw_data/ .
-
-In the second step zip files are extracted to ./data_directory/extracted_data .
-
-In the third step, the extracted data is cleaned and reformatted
-to one pandas Series object per traffic light, which are then stored in ./data_directory/processed_data .
-
-## Development
 
 1. Activate a virtual environment
 
 2. Install project: ```pip install -e .```
 
-3. Start running pipeline: ```python bin/01_download_data```
+3. Start running pipeline.
+```
+python bin/01_download_data
+python bin/02_preprocess
+```

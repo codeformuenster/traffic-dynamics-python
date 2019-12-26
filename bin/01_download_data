@@ -1,5 +1,13 @@
 #!/usr/bin/env python3
+# Download and reformat traffic data.
+# The the first step, zip files are downloaded to ./data_directory/raw_data/ .
+# In the second step zip files are extracted to ./data_directory/extracted_data .
 
-from traffic_dynamics_python import download_data
 
+from traffic_dynamics_python import download_data, extract_data
+
+# download
 download_data()
+
+# extract data
+extract_data()
