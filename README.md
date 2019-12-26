@@ -26,4 +26,4 @@ to one pandas Series object per traffic light, which are then stored in ./data_d
 
 2. Install project: ```pip install -e .```
 
-3. Start running pipeline: ```python scripts/01_download_data.py```
+3. Start running pipeline: ```python bin/01_download_data```
